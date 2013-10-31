@@ -4,13 +4,13 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import org.junit.runners.Parameterized.Parameters
 
-@GrabResolver(name='saucelabs-repository', root='http://repository-saucelabs.forge.cloudbees.com/release')
+
 @Grapes([
 	@Grab("org.gebish:geb-core:0.9.2"),
-	@Grab("org.seleniumhq.selenium:selenium-firefox-driver:2.26.0"),
-	@Grab("org.seleniumhq.selenium:selenium-support:2.26.0")
-	@Grab("com.saucelabs:sauce_junit:1.0.19")
+	@Grab("org.seleniumhq.selenium:selenium-chrome-driver:2.26.0"),
+	@Grab("org.seleniumhq.selenium:selenium-support:2.26.0"),
 ])
+
 import geb.Browser
 import com.saucelabs.junit.Parallelized;
 
@@ -30,21 +30,26 @@ class MultiplierTest {
 	}
 
 	@Before void setUp() {
+		println "${Thread.currentThread()} checking.... ${param} and ${expectedResult}"
 		testee = new GroovyMultiplier()
 	}
 
 	@Test void positivesFixed() {
+		println "${Thread.currentThread()} checking.... ${param} and ${expectedResult}"
 		assert testee.triple(1) == 3: "+ve multiplier error"
 	}
 
 	@Test void positivesParameterized() {
+		println "${Thread.currentThread()} checking.... ${param} and ${expectedResult}"
 		assert testee.triple(param) == expectedResult
 	}
 
 	@Test void negativesParameterized() {
+		println "${Thread.currentThread()} checking.... ${param} and ${expectedResult}"
 		assert testee.triple(-param) == -expectedResult
 	}
 
+	/** /
 	@Test void googleWithNumber(){
 		Browser.drive {
 			go "http://google.com/ncr"
@@ -70,4 +75,5 @@ class MultiplierTest {
 			waitFor { title == "Wikipedia" }
 		}
 	}
+	/**/
 }
