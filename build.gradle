@@ -15,3 +15,8 @@ dependencies {
 	compile "com.saucelabs:sauce_junit:1.0.19"
 	testCompile 'junit:junit:4.11'
 }
+
+task runScript (dependsOn: 'classes', type: JavaExec) {
+	main = 'MultiplierTest'
+	classpath = sourceSets.main.runtimeClasspath
+}
