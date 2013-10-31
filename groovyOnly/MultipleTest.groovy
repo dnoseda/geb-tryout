@@ -8,7 +8,7 @@ import org.junit.runners.Parameterized.Parameters
 @Grapes([
 	@Grab("org.gebish:geb-core:0.9.2"),
 	@Grab("org.seleniumhq.selenium:selenium-firefox-driver:2.26.0"),
-	@Grab("org.seleniumhq.selenium:selenium-support:2.26.0")
+	@Grab("org.seleniumhq.selenium:selenium-support:2.26.0"),
 	@Grab("com.saucelabs:sauce_junit:1.0.19")
 ])
 import geb.Browser
