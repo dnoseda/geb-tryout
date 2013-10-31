@@ -47,6 +47,6 @@
 /MultiplierTest$_googleWithNumber_closure2_closure3.class
 /MultiplierTest$_googleWithNumber_closure2_closure4.class
 /MultiplierTest.class
-groovyOnly/build/
-groovyOnly/.gradle
-groovyOnly/*.DS_Store*
+gradleOnly/build/
+gradleOnly/.gradle
+gradleOnly/*.DS_Store*
