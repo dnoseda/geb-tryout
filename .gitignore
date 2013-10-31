@@ -50,3 +50,4 @@
 gradleOnly/build/
 gradleOnly/.gradle
 gradleOnly/*.DS_Store*
+groovyOnly/chromedriver
